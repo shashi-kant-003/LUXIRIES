@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Freight big pro";
+}
+html body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    /* background-image: linear-gradient(rgb(65, 33, 33), rgb(100, 100, 58)); */
+    background-color: black;
+}
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.861);
+    position: fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 99;
+    /* display: none; */
+}
+#loader h1{
+    font-size: 4.9vw;
+    line-height:5.5vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    position: relative;
+    z-index: 9;
+}
+.nav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    width: 100%;
+    padding: 20px 4px ;
+    /* background-color: yellow; */
+    font-size: 27px;
+    font-weight: 800;
+    z-index: 999;
+}
+#yellow1{
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    z-index: 8;
+}
+#yellow2{
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    z-index: 7;
+}
+#loader video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color:black;
+    background-size: cover;
+    background-position: center;
+    /* transition: all ease 0.5s; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    color: white;
+    text-align: center;
+}
+
+.elem{
+    /* background-color: red; */
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.elem .blur{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    /* background-color: brown; */
+}
+
+.elem h2{
+    font-size:6.8vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    /* transition: all ease 0.2s; */
+    font-style: normal;
+    z-index: 9;
+    line-height: 6vw;
+
+}
+
+.elem .moving{
+    /* opacity: 0; */
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-45%) scaleY(0);
+    background-color: yellow;
+    width: 100%;
+    white-space: nowrap;
+    padding: 10px 0;
+    transition: all ease 0.5s;
+   
+}
+
+.elem .moving .moving-in{
+    /* background-color: lightseagreen; */
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.elem .moving .moving-in h5{
+    opacity: 0;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+    font-family: gilroy;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 35px;
+}
+
+@keyframes moving{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .moving{
+    transform: translate(0,-45%) scaleY(1);    
+}
+
+.elem:hover .moving h5{
+    opacity: 1;
+}
+.elem:hover h2{
+    /* color: black; */
+    font-style: italic;
+}
+
+
+
+#page2 img{
+    height: 100%;
+    width: 100%;
+    /* height: 600px; */
+    /* width: 500px; */
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+#page1 h4{
+    font-size: 4.9vw;
+    line-height:5.5vw;
+    font-weight: 500;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    
+}
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color:white;
+    /* overflow: hidden; */
+   
+}
+
+.image-container{
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap:nowrap;
+    /* overflow: hidden; */
+}
+
+.image-div{
+    position: relative;
+    height: 40vw;
+    width: 28vw;
+    overflow: hidden;
+    margin:  40px 20px;
+    
+    
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.3s;
+    /* transition-delay: 0.5s; */
+
+   
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.368);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    /* transition-delay: 0.3s; */
+    z-index: 9;
+
+
+}
+
+.overlay p{
+    font-style: italic;
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    opacity: 0;
+
+}
+
+.image-div:hover .overlay{
+    background-color: black;
+    transition: all ease 0.3s;
+
+    
+}
+
+.image-div:hover .overlay p{
+    opacity: 1;
+    transition: all ease 0.5s;
+}
+
+.image-div:hover img{
+    scale: 1.2;
+    transition: all ease 0.5s;
+
+}
+
+
+
+.footer{
+    height: 40vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer h2{
+    font-family: gilroy;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.footer .foot{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.footer .foot h3{
+    color: white;
+    font-size: 1.2vw;
+}
+
+.footer .foot h3 em{
+    color: yellow;
+}
