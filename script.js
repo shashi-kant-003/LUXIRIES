@@ -1,36 +1,36 @@
 // creating a timeline to use 
 // page 1 video animation
-function loading_gsap(){
-    var tl=gsap.timeline()
+// function loading_gsap(){
+//     var tl=gsap.timeline()
 
-tl.to("#yellow1",{
-    top:"-100%",
-    delay:0.3,
-    duration:0.7,
-    ease:"expo.out"
-})
+// tl.to("#yellow1",{
+//     top:"-100%",
+//     delay:0.3,
+//     duration:0.7,
+//     ease:"expo.out"
+// })
 
-tl.from("#yellow2",{
-    top:"100%",
-    delay:0.6,
-    duration:0.7,
-    ease:"expo.out"
-},"anim")
-tl.to("#loader h1",{
-    delay:0.6,
-    duration:0.7,
-    color:"black"
-},"anim")
+// tl.from("#yellow2",{
+//     top:"100%",
+//     delay:0.6,
+//     duration:0.7,
+//     ease:"expo.out"
+// },"anim")
+// tl.to("#loader h1",{
+//     delay:0.6,
+//     duration:0.7,
+//     color:"black"
+// },"anim")
 
-tl.to("#loader",{
-    opacity:0
-})
+// tl.to("#loader",{
+//     opacity:0
+// })
 
-tl.to("#loader",{
-    display:"none"
-})
-}
-loading_gsap()
+// tl.to("#loader",{
+//     display:"none"
+// })
+// }
+// loading_gsap()
 
 
 
