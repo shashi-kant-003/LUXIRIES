@@ -9,10 +9,62 @@ html body{
     height: 100%;
 }
 #main{
-    /* background-image: linear-gradient(rgb(65, 33, 33), rgb(100, 100, 58)); */
+    
     background-color: black;
 }
-#loader{
+
+
+/* navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: top 0.3s; /* Smooth transition for hiding/showing */
+}
+
+#navbar.hidden {
+    top: -60px; /* Hide the navbar by moving it out of view */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ccc;
+}
+/* #loader{
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.861);
@@ -24,8 +76,8 @@ html body{
     text-align: center;
     z-index: 99;
     /* display: none; */
-}
-#loader h1{
+ /* 
+/* #loader h1{
     font-size: 4.9vw;
     line-height:5.5vw;
     font-weight: 500;
@@ -33,48 +85,45 @@ html body{
     letter-spacing:1px;
     position: relative;
     z-index: 9;
-}
-.nav{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: absolute;
-    width: 100%;
-    padding: 20px 4px ;
-    /* background-color: yellow; */
-    font-size: 27px;
-    font-weight: 800;
-    z-index: 999;
-}
-#yellow1{
+} */
+
+/* #yellow1{
     height: 100%;
     width: 100%;
     background-color: yellow;
     position: absolute;
     z-index: 8;
-}
-#yellow2{
+} */
+/* #yellow2{
     height: 100%;
     width: 100%;
     background-color: yellow;
     position: absolute;
     z-index: 7;
-}
-#loader video{
+} */
+/* #loader video{
     height: 100%;
     width: 100%;
     position: absolute;
     object-fit: cover;
     z-index: 6;
-}
+} */
 
 #page1{
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background-color: yellow;
+    /* position: relative; */
+    /* background:url(/ASSETS/page1_bg.jpg); */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:end;
+    align-items:center;
     text-align: center;
 }
+
+.page1 img{
+    object-fit: cover;
+}
+
 
 #page2{
     height: 100vh;
@@ -182,6 +231,7 @@ html body{
 #page2 img{
     height: 100%;
     width: 100%;
+    /* position: fixed; */
     /* height: 600px; */
     /* width: 500px; */
     object-fit: cover;
@@ -203,7 +253,7 @@ html body{
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color:white;
+    background-color:black;
     /* overflow: hidden; */
    
 }
@@ -229,6 +279,7 @@ html body{
 .image-div img{
     height: 100%;
     width: 100%;
+     /* Start 50px below the final position */
     object-fit: cover;
     object-position: center;
     transition: all ease 0.3s;
@@ -270,7 +321,7 @@ html body{
 }
 
 .image-div:hover .overlay p{
-    opacity: 1;
+    opacity: 50%;
     transition: all ease 0.5s;
 }
 
@@ -281,41 +332,3 @@ html body{
 }
 
 
-
-.footer{
-    height: 40vh;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.footer h2{
-    font-family: gilroy;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 1vw;
-}
-
-.footer .foot{
-    height: 50%;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-
-.footer .foot h3{
-    color: white;
-    font-size: 1.2vw;
-}
-
-.footer .foot h3 em{
-    color: yellow;
-}
