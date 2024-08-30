@@ -8,12 +8,12 @@ gsap.utils.toArray('.product').forEach(product => {
         { 
             opacity: 1, 
             y: 0, 
-            duration: 1, 
+            duration: .3, 
             scrollTrigger: {
                 trigger: product,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 1,
+                scrub: 0,
                 markers: false
             }
         }

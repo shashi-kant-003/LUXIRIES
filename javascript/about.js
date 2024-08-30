@@ -11,12 +11,12 @@ gsap.utils.toArray(".content").forEach(content=>{
         {
             opacity:1,
             y:0,
-            duration:1,
+            duration:2,
             scrollTrigger:{
                 trigger:content,
                 start:"top 67%",
                 end:"bottom 35%",
-                scrub:true,
+                // scrub:true,
 
                 // when you to animate set  of images arranged in matrix form which  enter with fade in effect with your start marker and  fade out with your  end marker then you have to use "onleave"  , "onenter" etc .
 

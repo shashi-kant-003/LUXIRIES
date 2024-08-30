@@ -2,17 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Freight big pro";
+    font-family: "Freight big pro";
 }
-html body{
+html body {
     width: 100%;
     height: 100%;
 }
-#main{
-    /* background-image: linear-gradient(rgb(65, 33, 33), rgb(100, 100, 58)); */
+
+#main {
     background-color: black;
 }
-
 
 /* navbar */
 #navbar {
@@ -20,7 +19,7 @@ html body{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    backdrop-filter: blur(100px);
     color: #fff;
     padding: 10px 0;
     z-index: 1000;
@@ -64,26 +63,28 @@ ul li a {
 ul li a:hover {
     color: #ccc;
 }
-body{
+
+body {
     position: relative;
     padding-top: 60px;
-    background-color: black; 
+    background: rgb(50, 174, 158);
+    background: radial-gradient(circle, rgba(50, 174, 158, 1) 8%, rgba(52, 54, 104, 1) 100%);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main{
+.main {
     position: relative;
     color: red;
     width: 50vw;
-    
 }
 
-
+/* Updated form container */
 .form-container {
-    background-color: #333;
+    /* background-color: rgba(52, 54, 104, 0.8); Semi-transparent deep blue */
+    backdrop-filter: blur(500px);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -94,6 +95,11 @@ body{
     opacity: 0;
     transform: scale(0.9);
     animation: fadeInUp 0.8s ease-in-out forwards;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #fff; /* White placeholder text */
+    opacity: 0.7; /* Slightly transparent for subtlety */
 }
 
 h2 {
@@ -110,9 +116,9 @@ form {
 
 input, textarea {
     padding: 10px;
-    border: 1px solid #555;
+    border: 1px solid rgba(50, 174, 158, 0.5); /* Light teal border */
     border-radius: 5px;
-    background-color: #222;
+    background-color: rgba(50, 174, 158, 0.15); /* Light teal background */
     color: #fff;
     font-size: 16px;
     transition: border-color 0.3s ease;
@@ -124,7 +130,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-color: #777;
+    border-color: rgba(50, 174, 158, 0.8); /* Brighter teal on focus */
     outline: none;
 }
 
@@ -132,7 +138,7 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #555;
+    background-color: rgba(50, 174, 158, 0.8); /* Teal button */
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -144,7 +150,7 @@ button {
 }
 
 button:hover {
-    background-color: #777;
+    background-color: rgba(50, 174, 158, 1); /* Brighter teal on hover */
 }
 
 /* Animation keyframes */
@@ -179,23 +185,12 @@ button:hover {
     }
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes slideInUp {
-    0% {
+    from {
         opacity: 0;
         transform: translateY(20px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
