@@ -1,10 +1,12 @@
-*{
+/* Base styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Freight big pro";
 }
-html body {
+
+html, body {
     width: 100%;
     height: 100%;
 }
@@ -13,30 +15,30 @@ html body {
     background-color: black;
 }
 
-/* navbar */
+/* Navbar */
 #navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(6.25rem); /* 100px */
     color: #fff;
-    padding: 10px 0;
+    padding: 0.625rem 0; /* 10px 0 */
     z-index: 1000;
     transition: top 0.3s; /* Smooth transition for hiding/showing */
 }
 
 #navbar.hidden {
-    top: -60px; /* Hide the navbar by moving it out of view */
+    top: -3.75rem; /* -60px */
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 75rem; /* 1200px */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem; /* 20px */
 }
 
 .container h1 {
@@ -51,7 +53,7 @@ ul {
 
 ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1.25rem; /* 20px */
 }
 
 ul li a {
@@ -66,9 +68,9 @@ ul li a:hover {
 
 body {
     position: relative;
-    padding-top: 60px;
+    padding-top: 3.75rem; /* 60px */
     background: rgb(50, 174, 158);
-    background: radial-gradient(circle, rgba(50, 174, 158, 1) 8%, rgba(52, 54, 104, 1) 100%);
+    background: radial-gradient(circle, rgba(50, 174, 158, 1) 0.5rem, rgba(52, 54, 104, 1) 6.25rem); /* 8% and 100% */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -83,11 +85,10 @@ body {
 
 /* Updated form container */
 .form-container {
-    /* background-color: rgba(52, 54, 104, 0.8); Semi-transparent deep blue */
-    backdrop-filter: blur(500px);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(31.25rem); /* 500px */
+    padding: 1.875rem; /* 30px */
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3); /* 0 5px 15px */
     max-width: 50vw;
     width: 100%;
     color: white;
@@ -96,6 +97,7 @@ body {
     transform: scale(0.9);
     animation: fadeInUp 0.8s ease-in-out forwards;
 }
+
 input::placeholder,
 textarea::placeholder {
     color: #fff; /* White placeholder text */
@@ -103,28 +105,28 @@ textarea::placeholder {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
     animation: slideInDown 1s ease-in-out;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem; /* 15px */
     animation: slideInUp 0.8s ease-in-out;
 }
 
 input, textarea {
-    padding: 10px;
-    border: 1px solid rgba(50, 174, 158, 0.5); /* Light teal border */
-    border-radius: 5px;
+    padding: 0.625rem; /* 10px */
+    border: 0.0625rem solid rgba(50, 174, 158, 0.5); /* Light teal border */
+    border-radius: 0.3125rem; /* 5px */
     background-color: rgba(50, 174, 158, 0.15); /* Light teal background */
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     transition: border-color 0.3s ease;
     width: 100%;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(1.25rem); /* 20px */
     animation: fadeInUp 0.5s ease-in-out forwards;
     animation-delay: 0.3s;
 }
@@ -135,16 +137,16 @@ input:focus, textarea:focus {
 }
 
 button {
-    padding: 10px;
+    padding: 0.625rem; /* 10px */
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem; /* 5px */
     background-color: rgba(50, 174, 158, 0.8); /* Teal button */
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     cursor: pointer;
     transition: background-color 0.3s ease;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(1.25rem); /* 20px */
     animation: fadeInUp 0.5s ease-in-out forwards;
     animation-delay: 0.5s;
 }
@@ -166,7 +168,7 @@ button:hover {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.25rem); /* 20px */
     }
     to {
         opacity: 1;
@@ -177,7 +179,7 @@ button:hover {
 @keyframes slideInDown {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-1.25rem); /* -20px */
     }
     to {
         opacity: 1;
@@ -188,7 +190,7 @@ button:hover {
 @keyframes slideInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.25rem); /* 20px */
     }
     to {
         opacity: 1;
